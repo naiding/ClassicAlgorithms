@@ -18,4 +18,11 @@ For remembering and reviewing.
 
 4. **Knuth Shuffle**: In iteration, pick integer `r` between `0` and `i` uniformly at random and then swap `a[i]` and `a[r]`. 
 
-5.  
+5. **Merge Sort**: Time complexity $O(NlogN)$, space complexity $O(N)$.
+
+   >  Optimization
+   >
+   > - Use insertion sort for small subarrays. (Merge sort has too much overhead for tiny subarrays, and we can cutoff to insertion sort for ~ 7 items).
+   > - Stop if already sorted. After sorting left part and right part, check if `a[mid]<a[mid+1] ` , if it's true, then return before merge.
+
+6. **Bottom-Up Merge Sort**:  Time complexity $O(NlogN)$, space complexity $O(N)$.
