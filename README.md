@@ -26,3 +26,22 @@ For remembering and reviewing.
    > - Stop if already sorted. After sorting left part and right part, check if `a[mid]<a[mid+1] ` , if it's true, then return before merge.
 
 6. **Bottom-Up Merge Sort**:  Time complexity $O(NlogN)$, space complexity $O(N)$.
+
+7. **Quick Sort**: Time complexity is $O(NlogN)$, space complexity is $O(1)$.
+
+   > Optimization
+   >
+   > - Use insertion sort for small subarray.
+   >
+   > - Best choice of pivot item = median. Estimate true median by taking median of sample. Median-of-3(random) items. 
+   >
+   >   ```java
+   >   int m = medianOf3(a, left, left + (right - left) / 2, right);
+   >   swap(a, left, m);
+   >   ```
+
+8. **Quick Select**: $O(N)$ to find the k-th smallest item in an array.
+
+9. **3-Way Quick Sort**: to handle too many duplicate keys. (Classic quick sort will sort equal keys in next recursion)
+
+![](.\sorting-summary.png)
